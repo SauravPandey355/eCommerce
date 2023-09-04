@@ -1,0 +1,32 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.card-header {
+    width: 20%;
+    height: 20px;
+}
+.card-footer {
+    width: 20%;
+    height: 20px;
+    border-bottom:1px solid black;
+}
+.card-body {
+    width: 20%;
+    height: 30%;
+}

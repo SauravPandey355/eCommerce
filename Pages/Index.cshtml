@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    IndexModel indexModel = Model;
+    indexModel.OnGet();
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<h1>All items</h1>
+<div style="display:flex;flex-wrap:wrap;">
+    @for(int i = 0;i<10;i++){
+        <div style ="width:20%;height:40%;padding:5px;"> 
+        <h4 style="height: 20px;text-align:center;">
+            @indexModel?.cardDetails?.Name
+        </h4>
+        <div style="width: 100%;
+             height: 80%;">
+            <img src="@indexModel?.cardDetails?.Image" height="100%" width="100%" alt="@indexModel?.cardDetails?.Image" />
+        </div>
+        <h4 style="height: 20px;text-align:center;border-bottom:1px solid black;padding-bottom:30px;color:green;">
+        @indexModel?.cardDetails?.Balance
+        </h4>
+    </div>}
+</div>

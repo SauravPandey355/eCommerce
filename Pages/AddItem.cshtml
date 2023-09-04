@@ -1,0 +1,20 @@
+﻿@page
+@model eCommerce.Pages.AddItemModel
+@{
+
+}
+<div>
+    <h1>Here you can add item</h1>
+    <form method="post" id="InputForm" onsubmit="AddItem()">
+        <input type="text" placeholder="Name" id="InputName" required/>
+        <input type="number" placeholder="Balance" id="InputBalance"/>
+        <input type="file" placeholder="Upload a photo" id="Image"/>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    function AddItem(){
+    console.log(document.getElementById("InputForm").value);
+    event.preventDefault();
+    }
+</script>
